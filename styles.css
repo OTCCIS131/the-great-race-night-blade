@@ -5,41 +5,64 @@ body{
 	background-size:cover;
 	height: 100vh;
 	width: 100vw;
-
-	
-	
-	
-	
 }
+
 .racestart{
 	position:fixed;
 	left:20px;
     top:30px;
 	opacity: 
-	
-	
 }
+
 .charstart{
-	position:fixed;
-	left:5px;
+	position:absolute;
     bottom:14em;
 	height: 12%;
-   
-	
-	
-}
-.chartrack{
-
 }
 
+.charstartTop{
+	position:absolute;
+	z-index: 1;
+    bottom:14em;
+	height: 12%;
+}
 
 .pikastart{
-	position:fixed;
-	left:5px;
+	position:absolute;
+	
     bottom:4em;
 	height: 12%;
 }
-.pikatrack{
 
+.pikastartTop{
+	position:absolute;
+	z-index: 1;
+    bottom:4em;
+	height: 12%;
 }
 
+.winner{
+	position:fixed;
+	left:900px;
+    top:140px;
+}
+
+.loser{
+	position:fixed;
+	left:600px;
+    top:250px;
+}
+
+.winTag{
+	position:fixed;
+	left:880px;
+    top:350px;
+	z-index: 1;
+}
+
+.loseTag{
+	position:fixed;
+	left:615px;
+    top:400px;
+	z-index: 1;
+}

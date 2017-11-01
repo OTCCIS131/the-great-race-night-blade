@@ -1,73 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>       </title>
+		<title>The Great Race</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link href="styles.css" rel="stylesheet">
-	
-
 	</head>
 
 	<body>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		
-		<div id="hidey">
-			<button type="start" class="startbutton racestart prestart"@click="startRace"><img src="images/racebutton.jpg" v-if="seen"></button>
-			<div class="chartrack">
-			<img src="images/charstart1.png" alt="charmander start position" class="charstart prestart" v-if="seen">
-			</div>
-			<div class="pikatrack">
-			<img src="images/pikastart1.png" alt="pikachu start position" class="pikastart prestart" v-if="seen">
-			</div>
-		</div>
-		
+	
+		<div id="raceCode">
+			
+			<img class="racestart" src="images/racebutton.jpg" :style="{opacity: racing ? 0 : 1}" @click="letsRace">
+            <img id="pika" src="images/pikastart1.png" :style="{opacity: racing ? 0 : 1}" class="pikastartTop">
+			<img id="pika" src="images/pikarun.gif"  class="pikastart" :style="pikaRace" :class="pikaWinTest">
+            <img id="charmander" src="images/charstart1.png" :style="{opacity: racing ? 0 : 1}" class="charstartTop">
+			<img id="charmander" src="images/charrun.gif" class="charstart" :style="charRace" :class="charWinTest">
+			<img class="winner" src="images/charwin1.gif" :style="{opacity: charwin ? 1 : 0}" @click="restart">
+			<img class="loser" src="images/pikalose.gif" :style="{opacity: charwin ? 1 : 0}" @click="restart">
+			<img class="winner" src="images/pikawin.gif" :style="{opacity: pikawin ? 1 : 0}" @click="restart">
+			<img class="loser" src="images/charlose.gif" :style="{opacity: pikawin ? 1 : 0}" @click="restart">
+			<img class="winTag" src="images/winner.png" :style="{opacity: place ? 1 : 0}" @click="restart">
+			<img class="loseTag" src="images/loser.png" :style="{opacity: place ? 1 : 0}" @click="restart">
+
+        </div>
 		<script src="https://unpkg.com/vue"></script>
-		
-		<script>
-			/*$(function(){
-				let vm = new Vue({
-					el: '#app',
-					data:{
-						racing: true,
-						winner: null,
-						charmander: 0,
-						pikachu: 0,
-						tick: 0,
-						interval: null
-					},
-					computed: {
-						winning(){
-						if (this.charmander == this.pikachu) return null
-								
-						return this.charmander > this.pikachu ? 'charmander' : 'pikachu'
-						},
-					}
-					
-					
-					
-					
-					
-				})
-			})*/
-			$(function(){	
-				var hidey = new Vue({
-					el: '#hidey',
-					
-
-					if (racing = true){
-						data: {
-							seen: false
-						}
-					}
-				})
-
-		})
-		</script>
-		
-		
+		<script src="vue.js"></script>
 	</body>
 </html>
