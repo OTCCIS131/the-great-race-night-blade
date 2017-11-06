@@ -65,7 +65,7 @@ $(function(){
         computed: {
             pikaRace() {
                 return {
-                    left: `${this.pika}vw`
+                    right: `${this.pika}vw`
                 }
             },
 
@@ -76,7 +76,7 @@ $(function(){
 
             charRace() {
                 return {
-                    left: `${this.charmander}vw`
+                    right: `${this.charmander}vw`
                 }
             },
 

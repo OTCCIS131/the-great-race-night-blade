@@ -16,14 +16,15 @@ body{
 
 .charstart{
 	position:absolute;
-    bottom:14em;
+    bottom:17em;
 	height: 12%;
 }
 
 .charstartTop{
 	position:absolute;
 	z-index: 1;
-    bottom:14em;
+	right: 0em;
+    bottom:17em;
 	height: 12%;
 }
 
@@ -37,6 +38,7 @@ body{
 .pikastartTop{
 	position:absolute;
 	z-index: 1;
+	right: 0em;
     bottom:4em;
 	height: 12%;
 }
